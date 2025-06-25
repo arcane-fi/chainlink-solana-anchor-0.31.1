@@ -1,0 +1,25 @@
+[package]
+name = "chainlink_solana_anchor"
+description = "Chainlink client for Solana - Anchor v0.31.1 Compatible"
+version = "1.0.1"
+edition = "2021"
+license = "MIT"
+authors = ["Levi Bland <levi@arcane.fi>"]
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "chainlink_solana_anchor"
+
+[features]
+default = []
+
+[dependencies]
+# Use the same Solana version as Anchor 0.31.1
+solana-program = "~2.0"
+anchor-lang = "0.31.1"
+
+# Updated borsh versions
+borsh = "1.0"
+
+# Optional: for error handling
+thiserror = "1.0"
